@@ -12,10 +12,10 @@ BOT_NAME = "prices"
 SPIDER_MODULES = ["prices.spiders"]
 NEWSPIDER_MODULE = "prices.spiders"
 
-SCRAPEOPS_API_KEY = "0a03345b-97c6-4796-8dda-de2a54c11308"
+SCRAPEOPS_API_KEY = None
 SCRAPEOPS_FAKE_HEADERS_ENABLED = False
 # SCRAPEOPS_FAKE_USER_AGENT_ENABLED = True
-SCRAPEOPS_PROXY_ENABLED = True
+SCRAPEOPS_PROXY_ENABLED = False # change to true if key inserted.
 SCRAPEOPS_PROXY_SETTINGS = {"country": "us"}
 
 
@@ -34,15 +34,15 @@ DOWNLOADER_MIDDLEWARES = {
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 2
+#CONCURRENT_REQUESTS = 2 # reduce while trouble shooting to save proxy runs
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
 DOWNLOAD_DELAY = 0
 # The download delay setting will honor only one of:
-CONCURRENT_REQUESTS_PER_DOMAIN = 5
-CONCURRENT_REQUESTS_PER_IP = 5
+#CONCURRENT_REQUESTS_PER_DOMAIN = 5
+#CONCURRENT_REQUESTS_PER_IP = 5
 
 # Disable cookies (enabled by default)
 # COOKIES_ENABLED = False
